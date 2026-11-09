@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Princess Unlimited Foundation | Community Donation Drives</title>
+    
+    <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans-serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#F9F6F0',
+                        sand: '#EAE4D8',
+                        plum: {
+                            DEFAULT: '#6B2B43',
+                            dark: '#4F1D30',
+                            light: '#8D3F5C'
+                        },
+                        olive: {
+                            DEFAULT: '#8A8D76',
+                            light: '#A3A691'
+                        },
+                        charcoal: {
+                            DEFAULT: '#2F2F2F',
+                            light: '#4A4A4A'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(47,47,47,0.08)',
+                        'hover': '0 20px 50px -15px rgba(107,43,67,0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles for Animations & Organic Shapes -->
+    <style>
+        /* Smooth Scroll & Base Typography */
+        body {
+            background-color: #F9F6F0;
+            color: #2F2F2F;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Scroll Reveal Animations */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-fade {
+            opacity: 0;
+            transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-fade.active {
+            opacity: 1;
+        }
+
+        /* Staggered transition delays for grid items */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        /* Custom Organic Image Shapes */
+        .shape-leaf {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        .shape-arch {
+            border-radius: 10rem 10rem 0 0;
+        }
+        .shape-blob {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        }
+        
+        /* Parallax Container */
+        .parallax-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+        .parallax-img {
+            will-change: transform;
+            transform: scale(1.1); /* Buffer for translation */
+        }
+    </style>
+</head>
+<body class="selection:bg-plum selection:text-cream">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-500 py-6" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+            <!-- ASSET PLACEMENT: Replace text with your PNG Logo -> <img src="logo.png" class="h-10" alt="Foundation Logo"> -->
+            <a href="#" class="font-serif text-2xl font-semibold text-charcoal tracking-wide flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-plum block"></span>
+                Princess Unlimited
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest font-medium text-charcoal-light">
+                <a href="#drives" class="hover:text-plum transition-colors">Active Drives</a>
+                <a href="#impact" class="hover:text-plum transition-colors">Our Impact</a>
+                <a href="#contribute" class="hover:text-plum transition-colors">Get Involved</a>
+            </div>
+            
+            <a href="#contribute" class="hidden md:inline-block bg-transparent border border-plum text-plum px-6 py-2 rounded-full text-sm font-medium hover:bg-plum hover:text-cream transition-all duration-300">
+                Donate
+            </a>
+            
+            <!-- Mobile Menu Button (Visual Only for Preview) -->
+            <button class="md:hidden text-charcoal flex flex-col gap-1.5">
+                <span class="block w-6 h-0.5 bg-current"></span>
+                <span class="block w-6 h-0.5 bg-current"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <!-- Decorative background element -->
+            <div class="absolute top-[-10%] right-[-5%] w-2/3 h-2/3 bg-sand rounded-full blur-3xl opacity-50 mix-blend-multiply"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-16 items-center relative z-10 w-full">
+            <div class="max-w-xl pr-4 reveal-up">
+                <p class="text-olive font-semibold tracking-[0.2em] uppercase text-sm mb-6 flex items-center gap-4">
+                    <span class="w-12 h-px bg-olive block"></span> Community Action
+                </p>
+                <h1 class="font-serif text-5xl md:text-7xl text-charcoal leading-[1.1] mb-6">
+                    Uplifting Communities,<br>
+                    <span class="italic text-plum">One Drive</span> at a Time.
+                </h1>
+                <p class="text-lg text-charcoal-light mb-10 leading-relaxed font-light">
+                    The Princess Unlimited Foundation connects direct resources to under-resourced schools, orphanages, and vulnerable neighborhoods through targeted community donation drives.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#drives" class="bg-plum text-cream px-8 py-4 rounded-full text-center hover:bg-plum-dark transition-all duration-300 shadow-lg shadow-plum/20 hover:-translate-y-1">
+                        View Active Drives
+                    </a>
+                    <a href="#contribute" class="bg-transparent border border-charcoal/20 text-charcoal px-8 py-4 rounded-full text-center hover:border-charcoal transition-all duration-300 hover:-translate-y-1">
+                        Partner With Us
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative h-[600px] w-full flex items-center justify-center reveal-fade">
+                <!-- ASSET PLACEMENT: Main Hero Image -->
+                <!-- Replace src with an authentic, non-stock community photo. -->
+                <!-- The border-radius handles the organic asymmetric shape -->
+                <div class="relative w-full h-[90%] md:h-[110%] rounded-[3rem] md:rounded-[10rem] md:rounded-tr-[3rem] md:rounded-bl-[3rem] overflow-hidden shadow-2xl shadow-plum/10 parallax-wrapper">
+                    <img src="https://images.unsplash.com/photo-1593113565637-5271ef07ec4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Volunteers organizing supplies" 
+                         class="absolute inset-0 w-full h-full object-cover parallax-img"
+                         id="hero-parallax">
+                    <div class="absolute inset-0 bg-plum/10 mix-blend-overlay"></div>
+                </div>
+                
+                <!-- Floating decorative element -->
+                <div class="absolute bottom-10 -left-8 bg-cream p-6 rounded-3xl shadow-xl max-w-[200px] reveal-up delay-200 hidden md:block">
+                    <div class="text-3xl font-serif text-plum mb-2">100%</div>
+                    <div class="text-xs text-charcoal-light font-medium uppercase tracking-wider">Of public donations go to active drives.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Current & Upcoming Donation Drives -->
+    <section id="drives" class="py-32 bg-sand relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8 reveal-up">
+                <div class="max-w-2xl">
+                    <h2 class="font-serif text-4xl md:text-5xl text-charcoal mb-6">Active & Upcoming Drives</h2>
+                    <p class="text-charcoal-light text-lg font-light leading-relaxed">
+                        Explore our immediate initiatives. Whether you sponsor a single care package or rally your workplace for a corporate drop-off, your contribution fills an immediate need.
+                    </p>
+                </div>
+                <p class="text-sm uppercase tracking-widest text-olive font-medium whitespace-nowrap">Filter by deadline ↓</p>
+            </div>
+
+            <!-- Drives Grid (Asymmetric) -->
+            <div class="grid md:grid-cols-2 gap-10 md:gap-16">
+                
+                <!-- Card 1 (Shifts down slightly for organic feel) -->
+                <div class="bg-cream rounded-[2rem] p-8 md:p-10 shadow-soft hover:shadow-hover transition-all duration-500 md:mt-12 reveal-up relative group">
+                    <div class="absolute top-8 right-8 bg-red-100 text-red-800 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                        Urgent
+                    </div>
+                    <span class="text-olive text-sm font-semibold tracking-widest uppercase mb-4 block">Education</span>
+                    <h3 class="font-serif text-3xl text-charcoal mb-3">Winter Warmth & Stationery</h3>
+                    <p class="text-charcoal-light text-sm mb-8">Target: <span class="font-medium text-charcoal">Soshanguve Primary School</span></p>
+                    
+                    <div class="mb-8">
+                        <div class="flex justify-between text-sm mb-2 font-medium">
+                            <span class="text-charcoal">Goal Progress</span>
+                            <span class="text-plum">65%</span>
+                        </div>
+                        <div class="h-1.5 w-full bg-sand rounded-full overflow-hidden">
+                            <div class="h-full bg-plum w-[65%] rounded-full relative">
+                                <div class="absolute inset-0 bg-white/20 w-full animate-[shimmer_2s_infinite]"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-sand/50 rounded-2xl p-6 mb-8">
+                        <h4 class="text-xs uppercase tracking-widest text-charcoal-light font-semibold mb-4">Needed Items Wishlist:</h4>
+                        <ul class="space-y-3 text-sm text-charcoal">
+                            <li class="flex items-start gap-3">
+                                <span class="text-plum">✓</span>
+                                Backpacks & Pencil Cases (Fully Funded)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-olive">○</span>
+                                Winter Beanies & Scarves (Need 45 more)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-olive">○</span>
+                                Scientific Calculators (Need 20 more)
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="flex items-center justify-between mt-auto">
+                        <div class="text-xs text-charcoal-light">
+                            <span class="block uppercase tracking-wider font-semibold mb-1">Drop-off Deadline</span>
+                            <span class="text-charcoal">15th August 2027</span>
+                        </div>
+                        <button class="bg-charcoal text-cream w-12 h-12 rounded-full flex items-center justify-center group-hover:bg-plum transition-colors duration-300">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transform group-hover:translate-x-1 transition-transform">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-cream rounded-[2rem] p-8 md:p-10 shadow-soft hover:shadow-hover transition-all duration-500 reveal-up delay-100 relative group">
+                    <span class="text-olive text-sm font-semibold tracking-widest uppercase mb-4 block">Care & Support</span>
+                    <h3 class="font-serif text-3xl text-charcoal mb-3">Orphanage Supply Drop</h3>
+                    <p class="text-charcoal-light text-sm mb-8">Target: <span class="font-medium text-charcoal">Alexandria Safe House</span></p>
+                    
+                    <div class="mb-8">
+                        <div class="flex justify-between text-sm mb-2 font-medium">
+                            <span class="text-charcoal">Goal Progress</span>
+                            <span class="text-plum">30%</span>
+                        </div>
+                        <div class="h-1.5 w-full bg-sand rounded-full overflow-hidden">
+                            <div class="h-full bg-plum w-[30%] rounded-full relative"></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-sand/50 rounded-2xl p-6 mb-8">
+                        <h4 class="text-xs uppercase tracking-widest text-charcoal-light font-semibold mb-4">Needed Items Wishlist:</h4>
+                        <ul class="space-y-3 text-sm text-charcoal">
+                            <li class="flex items-start gap-3">
+                                <span class="text-olive">○</span>
+                                Non-perishable infant formula
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-olive">○</span>
+                                Nappies (Sizes 3, 4, 5)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-olive">○</span>
+                                Children's warm pajamas (Ages 2-8)
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="flex items-center justify-between mt-auto">
+                        <div class="text-xs text-charcoal-light">
+                            <span class="block uppercase tracking-wider font-semibold mb-1">Drop-off Deadline</span>
+                            <span class="text-charcoal">30th September 2027</span>
+                        </div>
+                        <button class="bg-charcoal text-cream w-12 h-12 rounded-full flex items-center justify-center group-hover:bg-plum transition-colors duration-300">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transform group-hover:translate-x-1 transition-transform">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Past Projects & Impact Gallery -->
+    <section id="impact" class="py-32 bg-charcoal text-cream relative overflow-hidden">
+        <!-- Subdued background texture/shape -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+             <div class="absolute w-[800px] h-[800px] rounded-full border border-cream/20 -top-[400px] -left-[200px]"></div>
+             <div class="absolute w-[600px] h-[600px] rounded-full border border-cream/20 bottom-[-200px] right-[-100px]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-24 reveal-up">
+                <h2 class="font-serif text-4xl md:text-5xl mb-6">Footprints of Hope</h2>
+                <p class="text-cream/70 text-lg font-light">Transparency is our core value. See exactly where resources went and the tangible difference made in previous successful drives.</p>
+            </div>
+
+            <!-- Impact Metrics -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-24 border-y border-cream/10 py-12 reveal-up">
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-serif text-plum-light mb-2">12k+</div>
+                    <div class="text-xs uppercase tracking-widest text-cream/50">Care Packages</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-serif text-olive-light mb-2">24</div>
+                    <div class="text-xs uppercase tracking-widest text-cream/50">Schools Reached</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-serif text-plum-light mb-2">8,500</div>
+                    <div class="text-xs uppercase tracking-widest text-cream/50">Learners Supported</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-serif text-olive-light mb-2">100%</div>
+                    <div class="text-xs uppercase tracking-widest text-cream/50">Direct Delivery</div>
+                </div>
+            </div>
+
+            <!-- Styled Photo Gallery Grid (Masonry feel) -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 reveal-up">
+                <!-- ASSET PLACEMENT: Gallery Images -->
+                <!-- Use warm, documentary-style imagery -->
+                <div class="md:col-span-7 h-[400px] rounded-3xl overflow-hidden group relative">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Children smiling" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%] group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                        <div>
+                            <h4 class="font-serif text-2xl text-cream mb-1">Mabopane Winter Drive 2025</h4>
+                            <p class="text-sm text-cream/70">Distributed 500 blankets and soup packets.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-5 h-[400px] rounded-[3rem] rounded-tr-none overflow-hidden group relative">
+                    <img src="https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Volunteers packing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%] group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                        <div>
+                            <h4 class="font-serif text-xl text-cream mb-1">Stationery Sorting</h4>
+                            <p class="text-sm text-cream/70">Corporate volunteers at work.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-4 h-[300px] rounded-[3rem] rounded-bl-none overflow-hidden group relative">
+                    <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="School supplies" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%] group-hover:grayscale-0">
+                </div>
+                <div class="md:col-span-8 h-[300px] rounded-3xl overflow-hidden group relative">
+                    <img src="https://images.unsplash.com/photo-1518398046578-8cca57782e17?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Community gathering" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%] group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                        <div>
+                            <h4 class="font-serif text-2xl text-cream mb-1">Community Library Project</h4>
+                            <p class="text-sm text-cream/70">Stocked shelves for a new youth center.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. How to Contribute / Get Involved -->
+    <section id="contribute" class="py-32 bg-cream relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-20 reveal-up">
+                <h2 class="font-serif text-4xl md:text-5xl text-charcoal mb-6">Stand With Us</h2>
+                <p class="text-charcoal-light text-lg font-light">Your involvement directly fuels our drives. Choose the method that best aligns with your capacity to give.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Method 1 -->
+                <div class="bg-sand/30 p-10 rounded-3xl border border-sand/50 hover:bg-white hover:shadow-soft transition-all duration-300 reveal-up">
+                    <div class="w-14 h-14 bg-olive/20 rounded-full flex items-center justify-center text-olive mb-6">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-charcoal mb-4">Item Drop-offs</h3>
+                    <p class="text-charcoal-light text-sm leading-relaxed mb-6 font-light">
+                        Purchase items directly from a drive's wishlist and deliver them to our official collection points. Perfect for hands-on givers.
+                    </p>
+                    <a href="#" class="text-plum font-semibold text-sm hover:text-plum-dark inline-flex items-center gap-2 group">
+                        Find Drop-off Points
+                        <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                </div>
+
+                <!-- Method 2 -->
+                <div class="bg-plum text-cream p-10 rounded-3xl shadow-hover reveal-up delay-100 transform md:-translate-y-4">
+                    <div class="w-14 h-14 bg-cream/10 rounded-full flex items-center justify-center text-cream mb-6">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-4">Financial Sponsorship</h3>
+                    <p class="text-cream/80 text-sm leading-relaxed mb-6 font-light">
+                        Let us handle the logistics. Your secure monetary donation allows us to bulk-buy needed items at wholesale rates.
+                    </p>
+                    <a href="#" class="bg-cream text-plum px-6 py-3 rounded-full text-sm font-medium hover:bg-sand transition-colors inline-block w-full text-center">
+                        Donate Securely
+                    </a>
+                </div>
+
+                <!-- Method 3 -->
+                <div class="bg-sand/30 p-10 rounded-3xl border border-sand/50 hover:bg-white hover:shadow-soft transition-all duration-300 reveal-up delay-200">
+                    <div class="w-14 h-14 bg-charcoal/10 rounded-full flex items-center justify-center text-charcoal mb-6">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-charcoal mb-4">Corporate Partnerships</h3>
+                    <p class="text-charcoal-light text-sm leading-relaxed mb-6 font-light">
+                        Engage your team by adopting an entire drive. We provide marketing assets, collection bins, and detailed impact reports.
+                    </p>
+                    <a href="#" class="text-plum font-semibold text-sm hover:text-plum-dark inline-flex items-center gap-2 group">
+                        Download Corporate Deck
+                        <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Footer -->
+    <footer class="bg-[#1A1819] text-cream pt-24 pb-12 rounded-t-[3rem] md:rounded-t-[5rem] mt-[-2rem] relative z-20">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-2 pr-8">
+                    <!-- Footer Logo Space -->
+                    <a href="#" class="font-serif text-3xl font-semibold text-cream tracking-wide flex items-center gap-3 mb-6">
+                        <span class="w-4 h-4 rounded-full bg-plum block"></span>
+                        Princess Unlimited
+                    </a>
+                    <p class="text-cream/50 text-sm leading-relaxed font-light max-w-sm">
+                        A registered Non-Profit Organization dedicated to uplifting vulnerable communities through targeted, transparent resource distribution drives.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-cream/50 font-light">
+                        <li><a href="#drives" class="hover:text-plum transition-colors">Active Drives</a></li>
+                        <li><a href="#impact" class="hover:text-plum transition-colors">Impact Reports</a></li>
+                        <li><a href="#" class="hover:text-plum transition-colors">Financial Transparency</a></li>
+                        <li><a href="#" class="hover:text-plum transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg mb-6">Connect</h4>
+                    <ul class="space-y-3 text-sm text-cream/50 font-light">
+                        <li><a href="mailto:hello@princessunlimited.org" class="hover:text-cream transition-colors">hello@princessunlimited.org</a></li>
+                        <li class="pt-4 flex gap-4">
+                            <!-- Social Icons -->
+                            <a href="#" class="w-10 h-10 rounded-full border border-cream/20 flex items-center justify-center hover:bg-plum hover:border-plum transition-all">
+                                <span class="sr-only">Instagram</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full border border-cream/20 flex items-center justify-center hover:bg-plum hover:border-plum transition-all">
+                                <span class="sr-only">LinkedIn</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-cream/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-cream/40 font-light">
+                <p>&copy; 2026 Princess Unlimited Foundation. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">NPO Registration: 123-456-NPO</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Navbar scroll effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('bg-cream/90', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+                    navbar.classList.remove('py-6');
+                } else {
+                    navbar.classList.remove('bg-cream/90', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+                    navbar.classList.add('py-6');
+                }
+            });
+
+            // 2. Intersection Observer for Scroll Reveals
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll('.reveal-up, .reveal-fade');
+            revealElements.forEach(el => observer.observe(el));
+
+            // 3. Simple Parallax Effect for Hero Image
+            const parallaxImg = document.getElementById('hero-parallax');
+            if (parallaxImg) {
+                window.addEventListener('scroll', () => {
+                    const scrolled = window.scrollY;
+                    if(scrolled < window.innerHeight) {
+                        // Move image down slightly as user scrolls down, creating depth
+                        parallaxImg.style.transform = `translateY(${scrolled * 0.15}px) scale(1.1)`;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
