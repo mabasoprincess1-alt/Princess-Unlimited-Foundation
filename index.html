@@ -17,16 +17,20 @@
             theme: {
                 extend: {
                     colors: {
-                        cream: '#F9F6F0',
-                        sand: '#EAE4D8',
-                        plum: {
-                            DEFAULT: '#6B2B43',
-                            dark: '#4F1D30',
-                            light: '#8D3F5C'
+                        cream: '#F9F7F3',
+                        sand: '#EBE7DF',
+                        navy: {
+                            DEFAULT: '#101F41',
+                            dark: '#0A1329',
+                            light: '#263B70'
                         },
-                        olive: {
-                            DEFAULT: '#8A8D76',
-                            light: '#A3A691'
+                        gold: {
+                            DEFAULT: '#C5A365',
+                            light: '#DDC292'
+                        },
+                        lavender: {
+                            DEFAULT: '#A88EB3',
+                            light: '#C4AACF'
                         },
                         charcoal: {
                             DEFAULT: '#2F2F2F',
@@ -39,7 +43,7 @@
                     },
                     boxShadow: {
                         'soft': '0 10px 40px -10px rgba(47,47,47,0.08)',
-                        'hover': '0 20px 50px -15px rgba(107,43,67,0.15)',
+                        'hover': '0 20px 50px -15px rgba(16,31,65,0.25)',
                     }
                 }
             }
@@ -101,29 +105,28 @@
         }
     </style>
 </head>
-<body class="selection:bg-plum selection:text-cream">
+<body class="selection:bg-navy selection:text-cream">
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 transition-all duration-500 py-6" id="navbar">
         <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-            <!-- ASSET PLACEMENT: Replace text with your PNG Logo -> <img src="logo.png" class="h-10" alt="Foundation Logo"> -->
-            <a href="#" class="font-serif text-2xl font-semibold text-charcoal tracking-wide flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full bg-plum block"></span>
-                Princess Unlimited
+            <!-- ASSET PLACEMENT: Logo Image -->
+            <a href="#" class="flex items-center gap-2">
+                <img src="Create_organization_logo_47dcabba.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x120/F9F6F0/101F41?text=Princess+Unlimited+Logo'" class="h-14 md:h-16 w-auto object-contain mix-blend-multiply" alt="Princess Unlimited Foundation Logo">
             </a>
             
             <div class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest font-medium text-charcoal-light">
-                <a href="#drives" class="hover:text-plum transition-colors">Active Drives</a>
-                <a href="#impact" class="hover:text-plum transition-colors">Our Impact</a>
-                <a href="#contribute" class="hover:text-plum transition-colors">Get Involved</a>
+                <a href="#drives" class="hover:text-navy transition-colors">Active Drives</a>
+                <a href="#impact" class="hover:text-navy transition-colors">Our Impact</a>
+                <a href="#contribute" class="hover:text-navy transition-colors">Get Involved</a>
             </div>
             
-            <a href="#contribute" class="hidden md:inline-block bg-transparent border border-plum text-plum px-6 py-2 rounded-full text-sm font-medium hover:bg-plum hover:text-cream transition-all duration-300">
+            <button onclick="openModal('General Donation')" class="hidden md:inline-block bg-transparent border border-navy text-navy px-6 py-2 rounded-full text-sm font-medium hover:bg-navy hover:text-cream transition-all duration-300 cursor-pointer">
                 Donate
-            </a>
+            </button>
             
             <!-- Mobile Menu Button (Visual Only for Preview) -->
-            <button class="md:hidden text-charcoal flex flex-col gap-1.5">
+            <button class="md:hidden text-navy flex flex-col gap-1.5">
                 <span class="block w-6 h-0.5 bg-current"></span>
                 <span class="block w-6 h-0.5 bg-current"></span>
             </button>
@@ -139,18 +142,18 @@
 
         <div class="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-16 items-center relative z-10 w-full">
             <div class="max-w-xl pr-4 reveal-up">
-                <p class="text-olive font-semibold tracking-[0.2em] uppercase text-sm mb-6 flex items-center gap-4">
-                    <span class="w-12 h-px bg-olive block"></span> Community Action
+                <p class="text-gold font-semibold tracking-[0.2em] uppercase text-sm mb-6 flex items-center gap-4">
+                    <span class="w-12 h-px bg-gold block"></span> Community Action
                 </p>
                 <h1 class="font-serif text-5xl md:text-7xl text-charcoal leading-[1.1] mb-6">
                     Uplifting Communities,<br>
-                    <span class="italic text-plum">One Drive</span> at a Time.
+                    <span class="italic text-lavender">One Drive</span> at a Time.
                 </h1>
                 <p class="text-lg text-charcoal-light mb-10 leading-relaxed font-light">
                     The Princess Unlimited Foundation connects direct resources to under-resourced schools, orphanages, and vulnerable neighborhoods through targeted community donation drives.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#drives" class="bg-plum text-cream px-8 py-4 rounded-full text-center hover:bg-plum-dark transition-all duration-300 shadow-lg shadow-plum/20 hover:-translate-y-1">
+                    <a href="#drives" class="bg-navy text-cream px-8 py-4 rounded-full text-center hover:bg-navy-dark transition-all duration-300 shadow-lg shadow-navy/20 hover:-translate-y-1">
                         View Active Drives
                     </a>
                     <a href="#contribute" class="bg-transparent border border-charcoal/20 text-charcoal px-8 py-4 rounded-full text-center hover:border-charcoal transition-all duration-300 hover:-translate-y-1">
@@ -163,17 +166,17 @@
                 <!-- ASSET PLACEMENT: Main Hero Image -->
                 <!-- Replace src with an authentic, non-stock community photo. -->
                 <!-- The border-radius handles the organic asymmetric shape -->
-                <div class="relative w-full h-[90%] md:h-[110%] rounded-[3rem] md:rounded-[10rem] md:rounded-tr-[3rem] md:rounded-bl-[3rem] overflow-hidden shadow-2xl shadow-plum/10 parallax-wrapper">
+                <div class="relative w-full h-[90%] md:h-[110%] rounded-[3rem] md:rounded-[10rem] md:rounded-tr-[3rem] md:rounded-bl-[3rem] overflow-hidden shadow-2xl shadow-navy/10 parallax-wrapper">
                     <img src="https://images.unsplash.com/photo-1593113565637-5271ef07ec4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                          alt="Volunteers organizing supplies" 
                          class="absolute inset-0 w-full h-full object-cover parallax-img"
                          id="hero-parallax">
-                    <div class="absolute inset-0 bg-plum/10 mix-blend-overlay"></div>
+                    <div class="absolute inset-0 bg-navy/10 mix-blend-overlay"></div>
                 </div>
                 
                 <!-- Floating decorative element -->
                 <div class="absolute bottom-10 -left-8 bg-cream p-6 rounded-3xl shadow-xl max-w-[200px] reveal-up delay-200 hidden md:block">
-                    <div class="text-3xl font-serif text-plum mb-2">100%</div>
+                    <div class="text-3xl font-serif text-navy mb-2">100%</div>
                     <div class="text-xs text-charcoal-light font-medium uppercase tracking-wider">Of public donations go to active drives.</div>
                 </div>
             </div>
@@ -190,7 +193,7 @@
                         Explore our immediate initiatives. Whether you sponsor a single care package or rally your workplace for a corporate drop-off, your contribution fills an immediate need.
                     </p>
                 </div>
-                <p class="text-sm uppercase tracking-widest text-olive font-medium whitespace-nowrap">Filter by deadline ↓</p>
+                <p class="text-sm uppercase tracking-widest text-gold font-medium whitespace-nowrap">Filter by deadline ↓</p>
             </div>
 
             <!-- Drives Grid (Asymmetric) -->
@@ -201,17 +204,17 @@
                     <div class="absolute top-8 right-8 bg-red-100 text-red-800 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
                         Urgent
                     </div>
-                    <span class="text-olive text-sm font-semibold tracking-widest uppercase mb-4 block">Education</span>
+                    <span class="text-gold text-sm font-semibold tracking-widest uppercase mb-4 block">Education</span>
                     <h3 class="font-serif text-3xl text-charcoal mb-3">Winter Warmth & Stationery</h3>
                     <p class="text-charcoal-light text-sm mb-8">Target: <span class="font-medium text-charcoal">Soshanguve Primary School</span></p>
                     
                     <div class="mb-8">
                         <div class="flex justify-between text-sm mb-2 font-medium">
                             <span class="text-charcoal">Goal Progress</span>
-                            <span class="text-plum">65%</span>
+                            <span class="text-navy">65%</span>
                         </div>
                         <div class="h-1.5 w-full bg-sand rounded-full overflow-hidden">
-                            <div class="h-full bg-plum w-[65%] rounded-full relative">
+                            <div class="h-full bg-navy w-[65%] rounded-full relative">
                                 <div class="absolute inset-0 bg-white/20 w-full animate-[shimmer_2s_infinite]"></div>
                             </div>
                         </div>
@@ -221,15 +224,15 @@
                         <h4 class="text-xs uppercase tracking-widest text-charcoal-light font-semibold mb-4">Needed Items Wishlist:</h4>
                         <ul class="space-y-3 text-sm text-charcoal">
                             <li class="flex items-start gap-3">
-                                <span class="text-plum">✓</span>
+                                <span class="text-navy">✓</span>
                                 Backpacks & Pencil Cases (Fully Funded)
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="text-olive">○</span>
+                                <span class="text-gold">○</span>
                                 Winter Beanies & Scarves (Need 45 more)
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="text-olive">○</span>
+                                <span class="text-gold">○</span>
                                 Scientific Calculators (Need 20 more)
                             </li>
                         </ul>
@@ -240,7 +243,7 @@
                             <span class="block uppercase tracking-wider font-semibold mb-1">Drop-off Deadline</span>
                             <span class="text-charcoal">15th August 2027</span>
                         </div>
-                        <button class="bg-charcoal text-cream w-12 h-12 rounded-full flex items-center justify-center group-hover:bg-plum transition-colors duration-300">
+                        <button onclick="openModal('Winter Warmth & Stationery')" class="bg-charcoal text-cream w-12 h-12 rounded-full flex items-center justify-center group-hover:bg-navy transition-colors duration-300">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transform group-hover:translate-x-1 transition-transform">
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
                             </svg>
@@ -250,17 +253,17 @@
 
                 <!-- Card 2 -->
                 <div class="bg-cream rounded-[2rem] p-8 md:p-10 shadow-soft hover:shadow-hover transition-all duration-500 reveal-up delay-100 relative group">
-                    <span class="text-olive text-sm font-semibold tracking-widest uppercase mb-4 block">Care & Support</span>
+                    <span class="text-gold text-sm font-semibold tracking-widest uppercase mb-4 block">Care & Support</span>
                     <h3 class="font-serif text-3xl text-charcoal mb-3">Orphanage Supply Drop</h3>
                     <p class="text-charcoal-light text-sm mb-8">Target: <span class="font-medium text-charcoal">Alexandria Safe House</span></p>
                     
                     <div class="mb-8">
                         <div class="flex justify-between text-sm mb-2 font-medium">
                             <span class="text-charcoal">Goal Progress</span>
-                            <span class="text-plum">30%</span>
+                            <span class="text-navy">30%</span>
                         </div>
                         <div class="h-1.5 w-full bg-sand rounded-full overflow-hidden">
-                            <div class="h-full bg-plum w-[30%] rounded-full relative"></div>
+                            <div class="h-full bg-navy w-[30%] rounded-full relative"></div>
                         </div>
                     </div>
 
@@ -268,15 +271,15 @@
                         <h4 class="text-xs uppercase tracking-widest text-charcoal-light font-semibold mb-4">Needed Items Wishlist:</h4>
                         <ul class="space-y-3 text-sm text-charcoal">
                             <li class="flex items-start gap-3">
-                                <span class="text-olive">○</span>
+                                <span class="text-gold">○</span>
                                 Non-perishable infant formula
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="text-olive">○</span>
+                                <span class="text-gold">○</span>
                                 Nappies (Sizes 3, 4, 5)
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="text-olive">○</span>
+                                <span class="text-gold">○</span>
                                 Children's warm pajamas (Ages 2-8)
                             </li>
                         </ul>
@@ -287,7 +290,7 @@
                             <span class="block uppercase tracking-wider font-semibold mb-1">Drop-off Deadline</span>
                             <span class="text-charcoal">30th September 2027</span>
                         </div>
-                        <button class="bg-charcoal text-cream w-12 h-12 rounded-full flex items-center justify-center group-hover:bg-plum transition-colors duration-300">
+                        <button onclick="openModal('Orphanage Supply Drop')" class="bg-charcoal text-cream w-12 h-12 rounded-full flex items-center justify-center group-hover:bg-navy transition-colors duration-300">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transform group-hover:translate-x-1 transition-transform">
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
                             </svg>
@@ -300,7 +303,7 @@
     </section>
 
     <!-- 3. Past Projects & Impact Gallery -->
-    <section id="impact" class="py-32 bg-charcoal text-cream relative overflow-hidden">
+    <section id="impact" class="py-32 bg-navy text-cream relative overflow-hidden">
         <!-- Subdued background texture/shape -->
         <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
              <div class="absolute w-[800px] h-[800px] rounded-full border border-cream/20 -top-[400px] -left-[200px]"></div>
@@ -316,19 +319,19 @@
             <!-- Impact Metrics -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-24 border-y border-cream/10 py-12 reveal-up">
                 <div class="text-center">
-                    <div class="text-4xl md:text-5xl font-serif text-plum-light mb-2">12k+</div>
+                    <div class="text-4xl md:text-5xl font-serif text-lavender mb-2">12k+</div>
                     <div class="text-xs uppercase tracking-widest text-cream/50">Care Packages</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-4xl md:text-5xl font-serif text-olive-light mb-2">24</div>
+                    <div class="text-4xl md:text-5xl font-serif text-gold mb-2">24</div>
                     <div class="text-xs uppercase tracking-widest text-cream/50">Schools Reached</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-4xl md:text-5xl font-serif text-plum-light mb-2">8,500</div>
+                    <div class="text-4xl md:text-5xl font-serif text-lavender mb-2">8,500</div>
                     <div class="text-xs uppercase tracking-widest text-cream/50">Learners Supported</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-4xl md:text-5xl font-serif text-olive-light mb-2">100%</div>
+                    <div class="text-4xl md:text-5xl font-serif text-gold mb-2">100%</div>
                     <div class="text-xs uppercase tracking-widest text-cream/50">Direct Delivery</div>
                 </div>
             </div>
@@ -339,7 +342,7 @@
                 <!-- Use warm, documentary-style imagery -->
                 <div class="md:col-span-7 h-[400px] rounded-3xl overflow-hidden group relative">
                     <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Children smiling" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%] group-hover:grayscale-0">
-                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                         <div>
                             <h4 class="font-serif text-2xl text-cream mb-1">Mabopane Winter Drive 2025</h4>
                             <p class="text-sm text-cream/70">Distributed 500 blankets and soup packets.</p>
@@ -348,7 +351,7 @@
                 </div>
                 <div class="md:col-span-5 h-[400px] rounded-[3rem] rounded-tr-none overflow-hidden group relative">
                     <img src="https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Volunteers packing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%] group-hover:grayscale-0">
-                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                         <div>
                             <h4 class="font-serif text-xl text-cream mb-1">Stationery Sorting</h4>
                             <p class="text-sm text-cream/70">Corporate volunteers at work.</p>
@@ -360,7 +363,7 @@
                 </div>
                 <div class="md:col-span-8 h-[300px] rounded-3xl overflow-hidden group relative">
                     <img src="https://images.unsplash.com/photo-1518398046578-8cca57782e17?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Community gathering" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%] group-hover:grayscale-0">
-                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                         <div>
                             <h4 class="font-serif text-2xl text-cream mb-1">Community Library Project</h4>
                             <p class="text-sm text-cream/70">Stocked shelves for a new youth center.</p>
@@ -382,7 +385,7 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Method 1 -->
                 <div class="bg-sand/30 p-10 rounded-3xl border border-sand/50 hover:bg-white hover:shadow-soft transition-all duration-300 reveal-up">
-                    <div class="w-14 h-14 bg-olive/20 rounded-full flex items-center justify-center text-olive mb-6">
+                    <div class="w-14 h-14 bg-gold/20 rounded-full flex items-center justify-center text-gold mb-6">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
                         </svg>
@@ -391,14 +394,14 @@
                     <p class="text-charcoal-light text-sm leading-relaxed mb-6 font-light">
                         Purchase items directly from a drive's wishlist and deliver them to our official collection points. Perfect for hands-on givers.
                     </p>
-                    <a href="#" class="text-plum font-semibold text-sm hover:text-plum-dark inline-flex items-center gap-2 group">
+                    <button onclick="openDropoffModal()" class="text-navy font-semibold text-sm hover:text-navy-dark inline-flex items-center gap-2 group cursor-pointer">
                         Find Drop-off Points
                         <span class="transform group-hover:translate-x-1 transition-transform">→</span>
-                    </a>
+                    </button>
                 </div>
 
                 <!-- Method 2 -->
-                <div class="bg-plum text-cream p-10 rounded-3xl shadow-hover reveal-up delay-100 transform md:-translate-y-4">
+                <div class="bg-navy text-cream p-10 rounded-3xl shadow-hover reveal-up delay-100 transform md:-translate-y-4">
                     <div class="w-14 h-14 bg-cream/10 rounded-full flex items-center justify-center text-cream mb-6">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line>
@@ -408,9 +411,9 @@
                     <p class="text-cream/80 text-sm leading-relaxed mb-6 font-light">
                         Let us handle the logistics. Your secure monetary donation allows us to bulk-buy needed items at wholesale rates.
                     </p>
-                    <a href="#" class="bg-cream text-plum px-6 py-3 rounded-full text-sm font-medium hover:bg-sand transition-colors inline-block w-full text-center">
+                    <button onclick="openModal('General Donation')" class="bg-cream text-navy px-6 py-3 rounded-full text-sm font-medium hover:bg-sand transition-colors inline-block w-full text-center cursor-pointer">
                         Donate Securely
-                    </a>
+                    </button>
                 </div>
 
                 <!-- Method 3 -->
@@ -424,51 +427,209 @@
                     <p class="text-charcoal-light text-sm leading-relaxed mb-6 font-light">
                         Engage your team by adopting an entire drive. We provide marketing assets, collection bins, and detailed impact reports.
                     </p>
-                    <a href="#" class="text-plum font-semibold text-sm hover:text-plum-dark inline-flex items-center gap-2 group">
-                        Download Corporate Deck
+                    <button onclick="openCorporateModal()" class="text-navy font-semibold text-sm hover:text-navy-dark inline-flex items-center gap-2 group cursor-pointer">
+                        View Corporate Partners
                         <span class="transform group-hover:translate-x-1 transition-transform">→</span>
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- UI Components: Action Modal & Toast Notification -->
+    <div id="action-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-navy/60 backdrop-blur-sm p-4 transition-opacity">
+        <div class="bg-cream w-full max-w-md rounded-[2rem] p-8 shadow-2xl transform transition-all duration-300 opacity-0 translate-y-4 scale-95 relative">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-charcoal-light hover:text-navy transition-colors">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <h3 id="modal-title" class="font-serif text-2xl text-charcoal mb-2 pr-8">Make a Contribution</h3>
+            <p class="text-charcoal-light text-sm font-light mb-6">Your generosity fuels our mission. Fill out the details below to proceed.</p>
+            
+            <form onsubmit="event.preventDefault(); showToast('Thank you! Redirecting to secure payment portal...'); closeModal();" class="space-y-4">
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-charcoal-light font-semibold mb-2">Donation Amount</label>
+                    <div class="grid grid-cols-3 gap-3" id="amount-btn-group">
+                        <button type="button" onclick="selectAmount('250', this)" class="amount-btn bg-navy text-cream border border-navy rounded-xl py-2 text-sm font-medium transition-colors">R250</button>
+                        <button type="button" onclick="selectAmount('500', this)" class="amount-btn bg-transparent text-navy border border-navy rounded-xl py-2 text-sm font-medium hover:bg-navy hover:text-cream transition-colors">R500</button>
+                        <button type="button" onclick="selectAmount('other', this)" class="amount-btn bg-transparent text-navy border border-navy rounded-xl py-2 text-sm font-medium hover:bg-navy hover:text-cream transition-colors">Other</button>
+                    </div>
+                    <div id="custom-amount-container" class="hidden mt-3">
+                        <div class="relative">
+                            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-charcoal-light font-medium">R</span>
+                            <input type="number" id="custom-amount-input" min="10" class="w-full bg-sand/30 border border-sand/50 rounded-xl pl-9 pr-4 py-3 text-sm focus:outline-none focus:border-navy transition-colors" placeholder="Enter custom amount">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-charcoal-light font-semibold mb-2">Full Name</label>
+                    <input type="text" required class="w-full bg-sand/30 border border-sand/50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-navy transition-colors" placeholder="Jane Doe">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-charcoal-light font-semibold mb-2">Email Address</label>
+                    <input type="email" required class="w-full bg-sand/30 border border-sand/50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-navy transition-colors" placeholder="jane@example.com">
+                </div>
+                <button type="submit" class="w-full bg-navy text-cream py-4 rounded-xl text-sm font-medium hover:bg-navy-dark transition-all duration-300 shadow-md hover:shadow-lg mt-2">
+                    Proceed to Payment
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Drop-off Points Modal -->
+    <div id="dropoff-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-navy/60 backdrop-blur-sm p-4 transition-opacity">
+        <div class="bg-cream w-full max-w-lg rounded-[2rem] p-8 shadow-2xl transform transition-all duration-300 opacity-0 translate-y-4 scale-95 relative">
+            <button onclick="closeDropoffModal()" class="absolute top-6 right-6 text-charcoal-light hover:text-navy transition-colors">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <h3 class="font-serif text-2xl text-charcoal mb-2 pr-8">Official Drop-off Points</h3>
+            <p class="text-charcoal-light text-sm font-light mb-6">Bring your physical donations to any of our secure partner locations across Gauteng during operating hours.</p>
+            
+            <div class="space-y-4 max-h-[60vh] overflow-y-auto pr-2">
+                <!-- Location 1 -->
+                <a href="https://www.google.com/maps/dir/?api=1&destination=154+Rosebank+Rd,+Rosebank,+Johannesburg,+2196" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-sand/50 shadow-sm flex items-start gap-4 hover:border-navy hover:shadow-md transition-all duration-300 group cursor-pointer w-full text-left">
+                    <div class="mt-1 text-gold group-hover:scale-110 transition-transform duration-300">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-semibold text-charcoal text-sm uppercase tracking-wider mb-1 group-hover:text-navy transition-colors">Johannesburg Central Hub</h4>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-navy opacity-0 group-hover:opacity-100 transition-all transform -translate-x-2 group-hover:translate-x-0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </div>
+                        <p class="text-charcoal-light text-sm mb-2">154 Rosebank Rd, Rosebank<br>Johannesburg, 2196</p>
+                        <p class="text-xs font-medium text-navy bg-navy/10 inline-block px-2 py-1 rounded">Mon-Fri: 08:00 - 17:00</p>
+                    </div>
+                </a>
+
+                <!-- Location 2 -->
+                <a href="https://www.google.com/maps/dir/?api=1&destination=88+Lynnwood+Rd,+Brooklyn,+Pretoria,+0181" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-sand/50 shadow-sm flex items-start gap-4 hover:border-navy hover:shadow-md transition-all duration-300 group cursor-pointer w-full text-left">
+                    <div class="mt-1 text-gold group-hover:scale-110 transition-transform duration-300">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-semibold text-charcoal text-sm uppercase tracking-wider mb-1 group-hover:text-navy transition-colors">Pretoria East Collection Center</h4>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-navy opacity-0 group-hover:opacity-100 transition-all transform -translate-x-2 group-hover:translate-x-0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </div>
+                        <p class="text-charcoal-light text-sm mb-2">88 Lynnwood Rd, Brooklyn<br>Pretoria, 0181</p>
+                        <p class="text-xs font-medium text-navy bg-navy/10 inline-block px-2 py-1 rounded">Mon-Sat: 09:00 - 15:00</p>
+                    </div>
+                </a>
+
+                <!-- Location 3 -->
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Block+H,+Main+Street,+Soshanguve,+0152" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-sand/50 shadow-sm flex items-start gap-4 hover:border-navy hover:shadow-md transition-all duration-300 group cursor-pointer w-full text-left">
+                    <div class="mt-1 text-gold group-hover:scale-110 transition-transform duration-300">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-semibold text-charcoal text-sm uppercase tracking-wider mb-1 group-hover:text-navy transition-colors">Soshanguve Community Hall</h4>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-navy opacity-0 group-hover:opacity-100 transition-all transform -translate-x-2 group-hover:translate-x-0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </div>
+                        <p class="text-charcoal-light text-sm mb-2">Block H, Main Street<br>Soshanguve, 0152</p>
+                        <p class="text-xs font-medium text-navy bg-navy/10 inline-block px-2 py-1 rounded">Weekends Only: 10:00 - 14:00</p>
+                    </div>
+                </a>
+            </div>
+            
+            <button onclick="closeDropoffModal();" class="w-full bg-transparent border border-navy text-navy py-4 rounded-xl text-sm font-medium hover:bg-navy hover:text-cream transition-all duration-300 mt-6">
+                Close Points Map
+            </button>
+        </div>
+    </div>
+
+    <!-- Corporate Partners Modal -->
+    <div id="corporate-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-navy/60 backdrop-blur-sm p-4 transition-opacity">
+        <div class="bg-cream w-full max-w-lg rounded-[2rem] p-8 shadow-2xl transform transition-all duration-300 opacity-0 translate-y-4 scale-95 relative">
+            <button onclick="closeCorporateModal()" class="absolute top-6 right-6 text-charcoal-light hover:text-navy transition-colors">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <h3 class="font-serif text-2xl text-charcoal mb-2 pr-8">Our Corporate Partners</h3>
+            <p class="text-charcoal-light text-sm font-light mb-6">We are deeply grateful to the organizations that amplify our impact through corporate drive adoptions and bulk sponsorships.</p>
+            
+            <div class="space-y-4 max-h-[50vh] overflow-y-auto pr-2">
+                <!-- Partner 1 -->
+                <div class="bg-white p-5 rounded-2xl border border-sand/50 shadow-sm flex items-center gap-4 hover:border-navy hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full bg-navy/10 flex items-center justify-center text-navy font-bold font-serif text-xl shrink-0">
+                        S
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-charcoal text-sm uppercase tracking-wider">Synergy Tech SA</h4>
+                        <p class="text-charcoal-light text-xs mt-1">Sponsored: <span class="font-medium text-navy">2025 Winter Warmth Drive</span></p>
+                    </div>
+                </div>
+
+                <!-- Partner 2 -->
+                <div class="bg-white p-5 rounded-2xl border border-sand/50 shadow-sm flex items-center gap-4 hover:border-gold hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold font-serif text-xl shrink-0">
+                        A
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-charcoal text-sm uppercase tracking-wider">Apex Financial Services</h4>
+                        <p class="text-charcoal-light text-xs mt-1">Sponsored: <span class="font-medium text-navy">Stationery Starter Packs (500+)</span></p>
+                    </div>
+                </div>
+
+                <!-- Partner 3 -->
+                <div class="bg-white p-5 rounded-2xl border border-sand/50 shadow-sm flex items-center gap-4 hover:border-lavender hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full bg-lavender/20 flex items-center justify-center text-charcoal font-bold font-serif text-xl shrink-0">
+                        N
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-charcoal text-sm uppercase tracking-wider">Nexus Logistics</h4>
+                        <p class="text-charcoal-light text-xs mt-1">Provided: <span class="font-medium text-navy">Pro-bono Transport Fleet</span></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6">
+                <button onclick="showToast('Corporate Sponsorship Deck download initiated.'); closeCorporateModal();" class="w-full bg-navy text-cream py-4 rounded-xl text-sm font-medium hover:bg-navy-dark transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Download Sponsorship Deck
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-message" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-[100] bg-navy text-cream px-6 py-4 rounded-2xl shadow-hover transform transition-all duration-300 translate-y-[150%] opacity-0 flex items-center gap-3 w-max max-w-[90vw]">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-gold"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <span id="toast-text" class="text-sm font-light">Notification message</span>
+    </div>
+
     <!-- 5. Footer -->
-    <footer class="bg-[#1A1819] text-cream pt-24 pb-12 rounded-t-[3rem] md:rounded-t-[5rem] mt-[-2rem] relative z-20">
+    <footer class="bg-navy-dark text-cream pt-24 pb-12 rounded-t-[3rem] md:rounded-t-[5rem] mt-[-2rem] relative z-20">
         <div class="max-w-7xl mx-auto px-6 md:px-12">
             <div class="grid md:grid-cols-4 gap-12 mb-16">
                 <div class="md:col-span-2 pr-8">
                     <!-- Footer Logo Space -->
-                    <a href="#" class="font-serif text-3xl font-semibold text-cream tracking-wide flex items-center gap-3 mb-6">
-                        <span class="w-4 h-4 rounded-full bg-plum block"></span>
-                        Princess Unlimited
-                    </a>
-                    <p class="text-cream/50 text-sm leading-relaxed font-light max-w-sm">
+                    <div class="bg-cream/95 p-3 rounded-2xl inline-block mb-6 shadow-lg">
+                        <img src="Create_organization_logo_47dcabba.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x120/F9F7F3/101F41?text=Princess+Unlimited+Logo'" class="h-12 md:h-16 w-auto object-contain mix-blend-multiply" alt="Princess Unlimited Foundation Logo">
+                    </div>
+                    <p class="text-cream/70 text-sm leading-relaxed font-light max-w-sm">
                         A registered Non-Profit Organization dedicated to uplifting vulnerable communities through targeted, transparent resource distribution drives.
                     </p>
                 </div>
                 
                 <div>
-                    <h4 class="font-serif text-lg mb-6">Quick Links</h4>
-                    <ul class="space-y-3 text-sm text-cream/50 font-light">
-                        <li><a href="#drives" class="hover:text-plum transition-colors">Active Drives</a></li>
-                        <li><a href="#impact" class="hover:text-plum transition-colors">Impact Reports</a></li>
-                        <li><a href="#" class="hover:text-plum transition-colors">Financial Transparency</a></li>
-                        <li><a href="#" class="hover:text-plum transition-colors">Privacy Policy</a></li>
+                    <h4 class="font-serif text-lg mb-6 text-gold">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-cream/70 font-light">
+                        <li><a href="#drives" class="hover:text-gold transition-colors">Active Drives</a></li>
+                        <li><a href="#impact" class="hover:text-gold transition-colors">Impact Reports</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Financial Transparency</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Privacy Policy</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-serif text-lg mb-6">Connect</h4>
-                    <ul class="space-y-3 text-sm text-cream/50 font-light">
+                    <h4 class="font-serif text-lg mb-6 text-gold">Connect</h4>
+                    <ul class="space-y-3 text-sm text-cream/70 font-light">
                         <li><a href="mailto:hello@princessunlimited.org" class="hover:text-cream transition-colors">hello@princessunlimited.org</a></li>
                         <li class="pt-4 flex gap-4">
                             <!-- Social Icons -->
-                            <a href="#" class="w-10 h-10 rounded-full border border-cream/20 flex items-center justify-center hover:bg-plum hover:border-plum transition-all">
+                            <a href="#" class="w-10 h-10 rounded-full border border-cream/30 flex items-center justify-center hover:bg-gold hover:border-gold hover:text-navy-dark transition-all">
                                 <span class="sr-only">Instagram</span>
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                             </a>
-                            <a href="#" class="w-10 h-10 rounded-full border border-cream/20 flex items-center justify-center hover:bg-plum hover:border-plum transition-all">
+                            <a href="#" class="w-10 h-10 rounded-full border border-cream/30 flex items-center justify-center hover:bg-gold hover:border-gold hover:text-navy-dark transition-all">
                                 <span class="sr-only">LinkedIn</span>
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                             </a>
@@ -477,7 +638,7 @@
                 </div>
             </div>
 
-            <div class="border-t border-cream/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-cream/40 font-light">
+            <div class="border-t border-cream/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-cream/50 font-light">
                 <p>&copy; 2026 Princess Unlimited Foundation. All rights reserved.</p>
                 <p class="mt-2 md:mt-0">NPO Registration: 123-456-NPO</p>
             </div>
@@ -528,6 +689,126 @@
                         parallaxImg.style.transform = `translateY(${scrolled * 0.15}px) scale(1.1)`;
                     }
                 });
+            }
+        });
+
+        // Interactive UI Functions (Modal & Toast)
+        const modal = document.getElementById('action-modal');
+        const modalContent = modal.querySelector('div');
+        const modalTitle = document.getElementById('modal-title');
+        
+        const dropoffModal = document.getElementById('dropoff-modal');
+        const dropoffModalContent = dropoffModal.querySelector('div');
+        
+        const corporateModal = document.getElementById('corporate-modal');
+        const corporateModalContent = corporateModal.querySelector('div');
+        
+        const toast = document.getElementById('toast-message');
+        const toastText = document.getElementById('toast-text');
+        let toastTimeout;
+
+        window.openModal = function(driveName) {
+            modalTitle.textContent = driveName === 'General Donation' ? 'Make a Contribution' : 'Support: ' + driveName;
+            modal.classList.remove('hidden');
+            // Small delay to allow display:block to apply before animating opacity/transform
+            requestAnimationFrame(() => {
+                modalContent.classList.remove('opacity-0', 'translate-y-4', 'scale-95');
+                modalContent.classList.add('opacity-100', 'translate-y-0', 'scale-100');
+            });
+        }
+
+        window.closeModal = function() {
+            modalContent.classList.remove('opacity-100', 'translate-y-0', 'scale-100');
+            modalContent.classList.add('opacity-0', 'translate-y-4', 'scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300); // Wait for transition to finish
+        }
+
+        window.openDropoffModal = function() {
+            dropoffModal.classList.remove('hidden');
+            requestAnimationFrame(() => {
+                dropoffModalContent.classList.remove('opacity-0', 'translate-y-4', 'scale-95');
+                dropoffModalContent.classList.add('opacity-100', 'translate-y-0', 'scale-100');
+            });
+        }
+
+        window.closeDropoffModal = function() {
+            dropoffModalContent.classList.remove('opacity-100', 'translate-y-0', 'scale-100');
+            dropoffModalContent.classList.add('opacity-0', 'translate-y-4', 'scale-95');
+            setTimeout(() => {
+                dropoffModal.classList.add('hidden');
+            }, 300);
+        }
+
+        window.openCorporateModal = function() {
+            corporateModal.classList.remove('hidden');
+            requestAnimationFrame(() => {
+                corporateModalContent.classList.remove('opacity-0', 'translate-y-4', 'scale-95');
+                corporateModalContent.classList.add('opacity-100', 'translate-y-0', 'scale-100');
+            });
+        }
+
+        window.closeCorporateModal = function() {
+            corporateModalContent.classList.remove('opacity-100', 'translate-y-0', 'scale-100');
+            corporateModalContent.classList.add('opacity-0', 'translate-y-4', 'scale-95');
+            setTimeout(() => {
+                corporateModal.classList.add('hidden');
+            }, 300);
+        }
+
+        window.showToast = function(message) {
+            toastText.textContent = message;
+            toast.classList.remove('translate-y-[150%]', 'opacity-0');
+            
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.add('translate-y-[150%]', 'opacity-0');
+            }, 3500); // Hide after 3.5 seconds
+        }
+
+        window.selectAmount = function(amount, btnElement) {
+            // Reset all buttons to default state
+            const buttons = document.querySelectorAll('.amount-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-navy', 'text-cream');
+                btn.classList.add('bg-transparent', 'text-navy');
+            });
+            
+            // Set the clicked button to active state
+            btnElement.classList.remove('bg-transparent', 'text-navy');
+            btnElement.classList.add('bg-navy', 'text-cream');
+            
+            const customContainer = document.getElementById('custom-amount-container');
+            const customInput = document.getElementById('custom-amount-input');
+            
+            if (amount === 'other') {
+                customContainer.classList.remove('hidden');
+                customInput.required = true;
+                customInput.focus();
+            } else {
+                customContainer.classList.add('hidden');
+                customInput.required = false;
+                customInput.value = ''; // Clear input when a preset is selected
+            }
+        }
+
+        // Close modal on outside click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        dropoffModal.addEventListener('click', (e) => {
+            if (e.target === dropoffModal) {
+                closeDropoffModal();
+            }
+        });
+
+        corporateModal.addEventListener('click', (e) => {
+            if (e.target === corporateModal) {
+                closeCorporateModal();
             }
         });
     </script>
